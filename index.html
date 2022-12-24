@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Decodificador</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="breakpoints.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <main>
+        <header>
+            <img src="style/Vector.svg" alt="" class="logo" id="logo">
+        </header>
+        <div class="app-container" id="app">
+            <form action="">
+
+                <textarea placeholder="Digite seu texto"></textarea>
+
+                <div>
+                    <div class="hint">
+                        <img src="style/bi_exclamation-circle-fill.svg" alt="apenas letras minusculas e sem acento" class="hint-icon">
+                        <span>apenas letras minusculas e sem acento</span>
+                    </div>
+                    <div class="butao">
+                        <input type="button" id="criptografar" onclick="criptografar()" value="criptografar">
+                        <input type="button" id="descriptografar" onclick="descriptografar()" value="descriptografar">
+                    </div>
+                </div>
+
+            </form>
+
+            <div id="resultado">
+                <span id="content-resultado"></span>
+                <div id="placeholder">
+                    <img src="style/High quality products 1 1.svg" alt="">
+                    <div class="ph-content">
+                        <h1 class="ph-title">Nenhuma Mensagem Encontrada</h1>
+                        <p>Digite um texto que você deseja criptografar ou descriptografar</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
