@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alura - Decodificador </title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+
+
+
+</head>
+<body>
+    <main class="main">
+
+        <section class="main logo">
+            <img src="alura_logo.svg" alt="alura logo">
+        </section>
+
+        <section class="main input">
+            <textarea class="textarea" name="ok" id="input" cols="30" rows="10" placeholder="Digite aqui..." ></textarea>
+
+            <div class="inf">
+                <img src="inf.svg" alt="informação" srcset="">
+                <p>Apenas letras minúsculas e sem acento.</p>
+            </div>
+
+            <div class="btns">
+                <button id="btn1" onclick="Criptografar()"  >Criptografar</button>
+                <button id="btn2" onclick="descriptografar()">Descriptografar</button>
+            </div>
+
+
+
+        </section>
+        <section class="main display">
+
+            <div class="main conjunto">
+
+                <div class="resultado">
+                </div>
+                <button class="btn3" onclick="copiar()">Copiar</button>
+            </div>
+
+            <div class="lupa">
+                <img src="lupa.svg" alt="" srcset="">
+                <h2>Nenhuma mensagem encontrada</h2>
+                <h3>Digite um texto que você deseja criptografar ou descriptografar.</h3>
+            </div>
+
+
+
+
+        </section>
+    </main>
+    <footer>
+        <div class="texto">
+            <p>
+                Elaborado por Rodrigo Adriano
+            </p>
+        </div>
+        <div class="links">
+            <ol>
+                <li>
+                    <a href="https://www.linkedin.com/in/rdgadriano/">
+                    <img src="https://skillicons.dev/icons?i=linkedin" class="img-social-networks-icon" alt="Logo Linkedin"></a>
+                </li>
+                <li>
+                    <a href="https://github.com/Rodrigoadriano/Decodificador--Alura">
+                    <img src="https://skillicons.dev/icons?i=github" class="img-social-networks-icon" alt="Logo Github"></a>
+                </li>
+            </ol>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

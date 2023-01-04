@@ -1,51 +1,80 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Decodificador</title>
 
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/style2.css">
     <link rel="stylesheet" href="./css/breakpoints.css">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 </head>
 
 <body>
+
     <main>
-        <header>
-            <img src="img/Vector.svg" alt="" class="logo" id="logo">
-        </header>
-        <div class="app-container" id="app">
-            <form action="">
 
-                <textarea placeholder="Digite seu texto"></textarea>
+        <!-- LOGO DA ALURA ------------------------------------------------------------>
+        <section>
+            <img src="img/Vector.svg" alt="logo da alura" class="logo" id="logo">
+        </section>
 
-                <div>
-                    <div class="hint">
-                        <img src="img/bi_exclamation-circle-fill.svg" alt="apenas letras minusculas e sem acento" class="hint-icon">
-                        <span>apenas letras minusculas e sem acento</span>
-                    </div>
-                    <div class="butao">
-                        <input type="button" id="criptografar" onclick="criptografar()" value="criptografar">
-                        <input type="button" id="descriptografar" onclick="descriptografar()" value="descriptografar">
-                    </div>
+        <!-- PRINCIPAL ----------------------------------------------------------------->
+        <div class="main-input" id="app">
+
+            <!-- AREA DO INPUT -->
+            <div class="container-input">
+
+                <!-- AREA DO INPUT DE TEXTO-->
+                <textarea  id="input-text" placeholder="Digite seu texto"></textarea>
+
+                <!-- AVISO DE LETRAS MINÚSCULAS -->
+                <div class="hint">
+                    <img src="img/bi_exclamation-circle-fill.svg" alt="apenas letras minusculas e sem acento" class="hint-icon">
+                    <span>Apenas letras minúsculas e sem acento.</span>
                 </div>
 
-            </form>
-
-            <div id="resultado">
-                <span id="content-resultado"></span>
-                <div id="placeholder">
-                    <img src="img/High quality products 1 1.svg" alt="">
-                    <div class="ph-content">
-                        <h1 class="ph-title">Nenhuma Mensagem Encontrada</h1>
-                        <p>Digite um texto que você deseja criptografar ou descriptografar</p>
-                    </div>
+                <!-- AREA DOS BOTOES-->
+                <div class="botoes">
+                    <input type="button" id="criptografar" onclick="criptografar()" value="Criptografar">
+                    <input type="button" id="descriptografar" onclick="descriptografar()" value="Descriptografar">
                 </div>
+
             </div>
+
         </div>
+
+
+        <!-- AREA DO RESULTADO --------------------------------------------------------->
+        <div id="resultado">
+            <img src="img/High quality products 1 1.svg" alt="">
+            <h1>Nenhum resultado encontrado...</h1>
+            <p>Digite um texto que você deseja criptografar ou descriptografar.</p>
+        </div>
+
+
     </main>
+
+    <!-- AREA DE RODAPE -------------------------------------------------------------------->
+    <footer>
+        <div class="texto">
+            <p>Elaborado por Elian Oliveira</p>
+        </div>
+
+        <div class="links">
+            <ol>
+                <li>
+                    <a href="https://www.linkedin.com/in/elian-oliveira/">
+                    <img src="https://skillicons.dev/icons?i=linkedin" class="img-social-networks-icon" alt="Logo Linkedin"></a>
+                </li>
+                <li>
+                    <a href="https://github.com/elianoliver/CodificacaoDesafioAlura1">
+                    <img src="https://skillicons.dev/icons?i=github" class="img-social-networks-icon" alt="Logo Github"></a>
+                </li>
+            </ol>
+        </div>
+    </footer>
+
+    <script src="./javascript/javascript.js"></script>
 </body>
 </html>
