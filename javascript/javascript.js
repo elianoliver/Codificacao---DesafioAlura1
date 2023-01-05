@@ -1,41 +1,48 @@
-var textInput = document.querySelector('#input-text')
-var outInput = document.querySelector('#content-resultado')
+let input = document.querySelector('.textarea')
+let lupa = document.querySelector('.lupa')
+let resultado = document.querySelector('.resultado')
+let conjunto = document.querySelector('.conjunto')
 
-function criptografar() {
-    var texto = textInput.value
-
-    var resultDescripto = texto.replace(/e/g, "enter").replace(/i/g, "imes").replace(/a/g, "ai").replace(/o/g, "ober").replace(/u/g, "ufat")
-
-    document.getElementById('content-resultado').innerHTML =  '<textarea readonly id="result">' + resultDescripto + '</textarea>' + '<button id="copy" onclick="copiar()">Copiar</button>' + '<button id="transferir" onclick="transferir()">Transferir</button>'
+let output = document.querySelector('.display');
+let btn1 = document.querySelector('#btn1');
+let btn2 = document.querySelector('#btn2');
 
 
-    document.getElementById('input-text').value = " ";
+conjunto.style.display = 'none'
+
+
+
+
+
+function Criptografar(){
+
+    lupa.style.display = 'none'
+    conjunto.style.display = 'flex'
+
+    let i = input.value.toLowerCase()
+
+    let tratado =  i.replaceAll("e","enter").replaceAll("i", "imes").replaceAll("a", "ai").replaceAll("o", "ober").replaceAll("u", "ufat")
+
+
+    return  resultado.innerHTML = tratado
+
 }
-function descriptografar () {
-    var texto = textInput.value
+function descriptografar(){
 
-    var resultDescripto = texto.replace(/enter/g, "e").replace(/imes/g, "i").replace(/ai/g, "a").replace(/ober/g, "o").replace(/ufat/g, "u");
+    lupa.style.display = 'none'
+    conjunto.style.display = 'flex'
 
-    document.getElementById('content-resultado').innerHTML =  '<textarea readonly id="result">' + resultDescripto + '</textarea>' + '<button id="copy" onclick="copiar()">Copiar</button>' + '<button id="transferir" onclick="transferir()">Transferir</button>'
+    let i = input.value.toLowerCase()
 
-    document.getElementById('input-text').value = " ";
-}
-function copiar() {
-    var textoCop = document.getElementById('result');
+    let tratado =  i.replaceAll("enter","e").replaceAll("imes", "i").replaceAll("ai", "a").replaceAll("ober", "o").replaceAll("ufat", "u")
 
-    textoCop.select();
-    document.execCommand('copy');
-    document.getElementById('result').value = " ";
-    alert('Texto copiado para a área de transferência')
+
+    return  resultado.innerHTML = tratado
+
 }
 
-
-function transferir() {
-    var textoCop = document.getElementById('result');
-
-    textoCop.select();
-    document.execCommand('copy');
-    document.getElementById('input-text').value = document.getElementById('result').value;
-    document.getElementById('result').value = " ";
-    alert('Texto enviado para a área de output')
+function copiar(){
+    navigator.clipboard.writeText(resultado.innerHTML);
+    alert("Mensagemn copiada")
 }
+
