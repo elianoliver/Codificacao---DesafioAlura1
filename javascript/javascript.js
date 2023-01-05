@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 let input = document.querySelector('.textarea')
 let lupa = document.querySelector('.lupa')
 let resultado = document.querySelector('.resultado')
@@ -46,3 +47,5 @@ function copiar(){
     alert("Mensagemn copiada")
 }
 
+=======
+>>>>>>> parent of e9c1370 (simplificando)
