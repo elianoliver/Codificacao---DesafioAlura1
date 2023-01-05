@@ -1,51 +1,41 @@
-<<<<<<< HEAD
-let input = document.querySelector('.textarea')
-let lupa = document.querySelector('.lupa')
-let resultado = document.querySelector('.resultado')
-let conjunto = document.querySelector('.conjunto')
+var textInput = document.querySelector('#input-text')
+var outInput = document.querySelector('#content-resultado')
 
-let output = document.querySelector('.display');
-let btn1 = document.querySelector('#btn1');
-let btn2 = document.querySelector('#btn2');
+function criptografar() {
+    var texto = textInput.value
 
+    var resultDescripto = texto.replace(/e/g, "enter").replace(/i/g, "imes").replace(/a/g, "ai").replace(/o/g, "ober").replace(/u/g, "ufat")
 
-conjunto.style.display = 'none'
+    document.getElementById('content-resultado').innerHTML =  '<textarea readonly id="result">' + resultDescripto + '</textarea>' + '<button id="copy" onclick="copiar()">Copiar</button>' + '<button id="transferir" onclick="transferir()">Transferir</button>'
 
 
-
-
-
-function Criptografar(){
-
-    lupa.style.display = 'none'
-    conjunto.style.display = 'flex'
-
-    let i = input.value.toLowerCase()
-
-    let tratado =  i.replaceAll("e","enter").replaceAll("i", "imes").replaceAll("a", "ai").replaceAll("o", "ober").replaceAll("u", "ufat")
-
-
-    return  resultado.innerHTML = tratado
-
+    document.getElementById('input-text').value = " ";
 }
-function descriptografar(){
+function descriptografar () {
+    var texto = textInput.value
 
-    lupa.style.display = 'none'
-    conjunto.style.display = 'flex'
+    var resultDescripto = texto.replace(/enter/g, "e").replace(/imes/g, "i").replace(/ai/g, "a").replace(/ober/g, "o").replace(/ufat/g, "u");
 
-    let i = input.value.toLowerCase()
+    document.getElementById('content-resultado').innerHTML =  '<textarea readonly id="result">' + resultDescripto + '</textarea>' + '<button id="copy" onclick="copiar()">Copiar</button>' + '<button id="transferir" onclick="transferir()">Transferir</button>'
 
-    let tratado =  i.replaceAll("enter","e").replaceAll("imes", "i").replaceAll("ai", "a").replaceAll("ober", "o").replaceAll("ufat", "u")
+    document.getElementById('input-text').value = " ";
+}
+function copiar() {
+    var textoCop = document.getElementById('result');
 
-
-    return  resultado.innerHTML = tratado
-
+    textoCop.select();
+    document.execCommand('copy');
+    document.getElementById('result').value = " ";
+    alert('Texto copiado para a área de transferência')
 }
 
-function copiar(){
-    navigator.clipboard.writeText(resultado.innerHTML);
-    alert("Mensagemn copiada")
-}
 
-=======
->>>>>>> parent of e9c1370 (simplificando)
+function transferir() {
+    var textoCop = document.getElementById('result');
+
+    textoCop.select();
+    document.execCommand('copy');
+    document.getElementById('input-text').value = document.getElementById('result').value;
+    document.getElementById('result').value = " ";
+    alert('Texto enviado para a área de output')
+}
