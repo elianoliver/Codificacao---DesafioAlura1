@@ -1,17 +1,13 @@
-/* CONFIGURAÇÃO INICIAL*/
-* {
-	box-sizing: border-box;
-	transition: all 0.2s ease-in;
-  }
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+    /*outline: 1px solid red;*/
+}
 
 html {
 	height: 100%;
-
-}
-
-h1, p, span {
-	margin: 0;
-	padding: 0;
 }
 
 body {
@@ -22,99 +18,104 @@ body {
 	font-family: 'Inter', sans-serif;
 	height: 100%;
 	width: 100%;
+
+
 }
 
 main {
 	display: flex;
 	flex-direction: row;
+	margin: 0 auto;
+
 	width: 100%;
 	max-width: 1440px;
 	height: 100%;
-	margin: 0 auto;
-	align-items: flex-start;
-	justify-content: space-between;
+
 	padding: 40px;
 }
 
-/* LOGO DA ALURA*/
-header {
+.logo{
+    display: block;
+    width: fit-content;
+    height: fit-content;
+}
+
+.main-input{
     display: flex;
-    justify-content: space-between;
-}
-header img {
-    margin: 40px;
-}
-
-
-.app-container {
-	display: flex;
 	flex-direction: row;
+
 	width: 100%;
 	height: 100%;
 	align-items: flex-start;
 	justify-content: space-between;
-	gap: 32px;
-
+	margin: 0px 10px 0px 10px;
 }
-
 
 .container-input {
 	display: flex;
 	flex-direction: column;
+
 	align-self: start;
 	justify-content: space-between;
 	width: 100%;
 	height: 100%;
-	gap: 32px;
 
+	gap: 10px;
 }
 
-textarea {
+#input-text, #result{
 	width: 100%;
-	height: 100%;
+	height: 90%;
+	min-height: 400px;
+	padding: 20px;
+
+	color: #0A3871;
+
 	background-color: transparent;
 	border: none;
 	font-family: 'Inter', sans-serif;
 	transition: all 0.5s cubic-bezier(.89,.34,.29,1.43);
-
 
 	font-weight: 400;
 	font-size: 24px;
 
 }
 
-textarea:focus {
+#input-text:focus {
 	background-color: white;
-	transform: scale(1.01);
 	outline: none;
 	border-radius: 20px;
 	box-shadow: 0px 44px 40px -7px rgba(0, 0, 0, 0.1);
-	padding: 20px;
+	padding: 40px;
+}
+
+#result:focus{
+	background-color: white;
+	outline: none;
+	border-radius: 20px;
+}
+
+#resultado{
+	box-shadow: 0px 44px 40px -7px rgba(0, 0, 0, 0.1);
 }
 
 textarea::placeholder {
 	color: #0A3871;
 }
 
-.butao {
-	display: flex;
-	flex-direction: row;
-	gap: 20px;
-
-
-}
-form div {
-	display: flex;
-	flex-direction: column;
-	gap: 20px;
-}
-
 .hint {
 	display: flex;
 	flex-direction: row;
+    justify-content: flex-start;
 	gap: 16px;
 }
 
+.botoes {
+	display: flex;
+	flex-direction: row;
+	align-content: center;
+	gap: 20px;
+}
 
 input[type=button] {
 	width: 100%;
@@ -136,9 +137,11 @@ input[type=button] {
 	color: #0A3871;
 }
 
-#resultado {
+#resultado, #result {
 	width: 400px;
 	padding: 32px;
+	border-style: none;
+
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -146,52 +149,30 @@ input[type=button] {
 	background-color: white;
 	height: 100%;
 	border-radius: 32px;
-
-
 }
 
-#placeholder {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
+
+
+footer{
+	display: inline;
 	text-align: center;
-}
+	background-color: #0A3871;
 
-.ph-content {
-	display: flex;
-	flex-direction: column;
-	gap: 16px;
-}
-
-.ph-content h1 {
-	font-size: 24px;
+	font-size: 20px;
 	font-weight: bold;
-	line-height:120%;
+	color: #0A3871;
 }
 
-.ph-content p {
-	font-weight: 400;
-	font-size: 16px;
-	line-height: 150%;
+footer p {
+    margin-bottom: 15px;
 }
-
-.rodape {
-    width: 100%;
-    height: 50px;
-
-    text-align: center;
-    color: #ffffff;
-    background-color: #2b68b3;
- }
-
- .rodape  article {/* verificar rodapé */
-    padding: 0 auto;
+footer a {
+    margin: 5px 15px;
     text-decoration: none;
-    margin: 5px 10px 0 10px;
-    font-weight: bold;
-    width: 100%;
-    height: auto;
-
- }
-
+    color: white;
+}
+.links a:hover {
+    transition: 0.5s;
+    opacity: 70%;
+    color: #0a3871;
+}

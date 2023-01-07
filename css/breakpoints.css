@@ -1,14 +1,16 @@
 @media screen and (max-width: 1024px) {
     main {
         flex-direction: column;
+        gap: 32px;
     }
 
-    header {
-        height: 100px;
+    .logo {
+        height: 50px;
         width: 100%;
+        margin: 10px;
     }
 
-    .app-container  {
+    body  {
         height: initial;
         flex-direction: column;
         flex-grow: 1;
@@ -29,8 +31,8 @@
 }
 
 @media  screen and (max-width: 767px) {
-    .butao {
+    .botoes {
         flex-direction: column;
-        
+
     }
 }
