@@ -97,6 +97,8 @@ main {
 
 #resultado{
 	box-shadow: 0px 44px 40px -7px rgba(0, 0, 0, 0.1);
+	padding: 10px;
+	gap: 10px;
 }
 
 textarea::placeholder {
